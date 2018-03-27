@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7ccc0c71a22f40f1a06fd1b64503b151" Name="Diagram1">
+        <EntityTypeShape EntityType="BDKrishokDBModel.Category" Width="1.5" PointX="3.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDKrishokDBModel.City" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDKrishokDBModel.Company" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDKrishokDBModel.Country" Width="1.5" PointX="1.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDKrishokDBModel.Disease" Width="1.5" PointX="10.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDKrishokDBModel.Feed" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDKrishokDBModel.FeedType" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDKrishokDBModel.Image" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDKrishokDBModel.Medicine" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDKrishokDBModel.MedicineType" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDKrishokDBModel.Shop" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDKrishokDBModel.Video" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Category__Catego__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__City__CountryId__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Company__CityId__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Shop__CityId__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Company__ImageId__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Feed__CompanyId__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Medicine__Compan__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Disease__ImageId__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Disease__Medicin__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Disease__VideoId__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Feed__FeedTypeId__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Feed__ImageId__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Feed__ShopId__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Feed__VideoId__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Medicine__ImageI__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Medicine__Medici__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Medicine__ShopId__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="BDKrishokDBModel.FK__Medicine__VideoI__619B8048" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

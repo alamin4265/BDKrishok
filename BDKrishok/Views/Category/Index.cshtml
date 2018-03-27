@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="content-wrapper" style="background-color:white">
+    <section class="content-header">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-users"></i>Initial Setup</a></li>
+            <li class="active">Category</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="form-horizontal">
+
+            <h4>
+                @Html.ActionLink("Create New", "Create")
+            </h4>
+            <table class="table" id="dataTable">
+                <thead>
+                <tr>
+                    <th>
+                        Category Name
+                    </th>
+                    <th>
+                        Parent Category
+                    </th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SubCategory.Name)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-xs btn-warning" }) 
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-xs btn-primary" }) 
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { onclick = "return confirm('Are sure wants to delete ("+ item.Name +") ?');", @class = "btn btn-xs btn-danger" })
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+</div>

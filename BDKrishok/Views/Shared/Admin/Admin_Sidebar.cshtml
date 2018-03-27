@@ -1,0 +1,84 @@
+﻿<aside class="main-sidebar">
+    <section class="sidebar">
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="~/Images/AdminImages/avatar04.png" class="img-circle" alt="User Image" />
+            </div>
+            <div class="pull-left info">
+                <p>Founder</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <ul class="sidebar-menu">
+            <li id="dashboard" runat="server">
+                <a href="">
+                    <i class="fa fa-dashboard"></i><span>Dashboard</span>
+                </a>
+            </li>
+            <li class="treeview" id="Product" runat="server">
+                <a href="#">
+                    <i class="fa fa-life-ring"></i> <span>Institute Setup</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="../Category/Create"><i class="fa fa-hand-o-right"></i>Category</a></li>
+                    @*<li><a href="../Batch/Create"><i class="fa fa-hand-o-right"></i>Batch</a></li>*@
+                </ul>
+            </li>
+            @*<li class="treeview">
+                <a href="#">
+                    <i class="fa fa-users"></i> <span>Student</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class=""><a href="../Student/Create"><i class="fa fa-hand-o-right"></i>Admission</a></li>
+                    <li><a href="#"><i class="fa fa-hand-o-right"></i>Student List</a></li>
+                    <li><a href="../../UI/Constraction.aspx"><i class="fa fa-hand-o-right"></i>Attendance</a></li>
+                </ul>
+            </li>*@
+            <li>
+                <a href="../../UI/Constraction.aspx">
+                    <i class="fa fa-tree"></i><span>B-Wallet</span>
+                </a>
+            </li>
+            <li id="faq" runat="server">
+                <a href="../../UI/Constraction.aspx">
+                    <i class="fa fa-tree"></i><span>Faq</span>
+                </a>
+            </li>
+            <li>
+                <a href="../../UI/Constraction.aspx">
+                    <i class="fa fa-tree"></i><span>Diposit Other</span>
+                </a>
+            </li>
+            <li>
+                <a href="../../UI/Constraction.aspx">
+                    <i class="fa fa-usd"></i><span>Price Code Generation</span>
+                </a>
+            </li>
+            <%--
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-money"></i> <span>Payment</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="active"><a href="../../UI/Constraction.aspx"><i class="fa fa-hand-o-right"></i> Withdraw Request</a></li>
+                    <li><a href="../../UI/Constraction.aspx"><i class="fa fa-hand-o-right"></i>  Send Balance</a></li>
+                </ul>
+            </li>--%>
+            <li id="message" runat="server">
+                <a href="../../UI/Constraction.aspx">
+                    <i class="fa fa-envelope-o"></i> <span>Message</span>
+                </a>
+            </li>
+            <li>
+                <a href="../../UI/Constraction.aspx">
+                    <i class="fa fa-cogs"></i> <span>Login Details</span> <small class="label pull-right bg-green">new</small>
+                </a>
+            </li>
+            <li>
+                <a href="../../UI/Constraction.aspx">
+                    <i class="fa fa-wrench"></i> <span>Settings</span> <small class="label pull-right bg-green">new</small>
+                </a>
+            </li>
+        </ul>
+    </section>
+</aside>

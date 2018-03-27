@@ -1,0 +1,97 @@
+﻿@using Models
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_ClientLayout.cshtml";
+    List<Category> CategoryList = ViewBag.Categories;
+}
+
+<!-- Heading Row -->
+<div class="row my-4">
+    <div class="col-lg-9">
+        <img class="img-fluid rounded" src="~/Uploads/HomePictures/1.jpg" height="400" width="1000" />
+    </div>
+    <!-- /.col-lg-8 -->
+    <div class="col-lg-3" style="margin-top:15px">
+        <div style="font-size: 12px;text-align: justify">
+            <center><p>পতিত জমির সফল ব্যাবহার করুন</p></center>
+            <p> পরের অধিনে কোন কাজ নয় । এবার সময় নিজে করার। আপনার স্বপ্ন বাস্তবায়নে বিডি কৃষক।</p>
+            <p>
+                বিডি কৃষক এর সদস্য হলে ব্যাংক ঋণ সহ কৃষি ও পশু-পাখি পালন এর খাবার,রোগ,ঔষধ,বাসস্থান এর সকল তথ্য পাওয়া যাবে।
+            </p>
+            <p>
+                পশু চিকিৎসক,কৃষিবিদের পরামর্শ ও সেবা । সার,কীটনাশক,বীজ,পশু-পাখি ও মাছের খাবারের উপর বিশেষ ছাড় এবং নিকটস্থ দোকানের অবস্থান জানা যাবে।
+            </p>
+        </div>
+        <div style="margin-top: 30px">
+            <center><h6>উদ্যোক্তা হওয়ার জন্য এখানে </h6></center>
+            <center><a class="btn btn-success btn-lg" href="#">উদ্যোক্তা হউন</a></center>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
+<!-- Call to Action Well -->
+<div class="card text-white bg-secondary my-4 text-center">
+    <div class="card-body">
+
+        <marquee><p class="text-white m-0">পশু চিকিৎসক,কৃষিবিদের পরামর্শ ও সেবা । সার,কীটনাশক,বীজ,পশু-পাখি ও মাছের খাবারের উপর বিশেষ ছাড় এবং নিকটস্থ দোকানের অবস্থান জানা যাবে।</p></marquee>
+    </div>
+</div>
+<!-- Content Row -->
+<div class="row">
+    @{
+        if (CategoryList != null || CategoryList.Count() > 0)
+        {
+            foreach (var category in CategoryList)
+            {
+
+                <div class="col-md-2 mb-2" style="margin-left: 15px; margin-right: 15px;padding: 0 0">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title" style="font-size: 24px; text-align: center">
+                                @category.Name
+                            </h2>
+                        </div>
+                        <div class="card-footer" style="padding: 10px">
+                            <p class="card-text" style="font-size: 12px">এখানে কিছু বর্ণনা থাকবে এখানে কিছু বর্ণনা থাকবে< এখানে কিছু বর্ণনা থাকবে<</p>
+                            <center>
+                                <a href="http://amzn.to/2oDB7fR">Buy</a>
+                                <a href='@Url.Action("Category", "MainCategory", new {category = category.Id})'>আরো জানুন</a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        }
+    }
+
+</div>
+<div>
+    <script type="text/javascript">
+        amzn_assoc_tracking_id = "bd2018-20";
+        amzn_assoc_ad_mode = "manual";
+        amzn_assoc_ad_type = "smart";
+        amzn_assoc_marketplace = "amazon";
+        amzn_assoc_region = "US";
+        amzn_assoc_design = "enhanced_links";
+        amzn_assoc_asins = "B079193NGK";
+        amzn_assoc_placement = "adunit";
+        amzn_assoc_linkid = "6029c8be1bf82a5c510576fed935e6be";
+    </script>
+    <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+</div>
+<div>
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=bd2018-20&marketplace=amazon&region=US&placement=B079193NGK&asins=B079193NGK&linkId=a61b905371cbf8d75cd58cefb2a2c3c2&show_border=false&link_opens_in_new_window=true"></iframe>
+</div><br />
+<div>
+    <a href="https://www.amazon.com/Minimalist-Classic-VOCARO-Carbon-Leather/dp/B079193NGK/ref=as_li_ss_il?ie=UTF8&qid=1520197919&sr=8-2-spons&keywords=watch&psc=1&linkCode=li2&tag=bd2018-20&linkId=1e75a28c3beb7e0b82cd081f23022019" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B079193NGK&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=bd2018-20"></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=bd2018-20&l=li2&o=1&a=B079193NGK" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</div><br />
+<div>
+
+
+</div>
+
+
+
+<!-- /.row -->

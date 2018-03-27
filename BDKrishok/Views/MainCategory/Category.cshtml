@@ -1,0 +1,47 @@
+﻿@using Models;
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_ClientLayout.cshtml";
+    List<Category> CategoryList = ViewBag.CategoryList;
+    Category cat = ViewBag.Cat;
+}
+<hr/>
+<a href="../MainCategory/Category?category=@cat.Id"><h4>@cat.Name</h4></a>
+
+<hr/>
+<ul class="nav nav-tabs">
+    
+
+
+        @{
+        foreach (var category in CategoryList)
+        {
+            <li class="nav-item">
+            <a href='@Url.Action("Category", "MainCategory", new {category = category.Id})' class="nav-link active btn" style="margin-left: 5px; margin-right: 5px; padding: 0 0">
+
+            <h2 class="card-title" style="font-size: 24px; text-align: center">@category.Name</h2></a>
+            </li>
+        }
+    }
+</ul>
+@*<div class="row container">
+    @{
+        foreach (var category in CategoryList)
+        {
+            
+            <a href='@Url.Action("Category", "MainCategory", new {category = category.Id})' class="btn" style="margin-left: 5px; margin-right: 5px; padding: 0 0">
+                <div class="card h-100" style="background: darkslategray; color: white;border: 3px solid darksalmon">
+                    <div class="card-body">
+                        <h2 class="card-title" style="font-size: 24px; text-align: center">@category.Name</h2>
+                    </div>
+                </div>
+            </a>
+        }
+    }
+</div>
+<hr/>*@
+<section style="height: 500px">
+
+</section>
+
+

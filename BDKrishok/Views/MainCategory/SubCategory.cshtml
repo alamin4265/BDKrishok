@@ -1,0 +1,33 @@
+﻿@using Models
+
+@{
+    ViewBag.Title = "SubCategory";
+    Layout = "~/Views/Shared/_ClientLayout.cshtml";
+
+    List<Category> CategoryList = ViewBag.CategoryList;
+}
+<div class="row">
+    @{
+        foreach (var category in CategoryList)
+        {
+            <div class="col-md-2 mb-2" style="margin-left: 15px; margin-right: 15px;padding: 0 0">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title" style="font-size: 24px;text-align: center">@category.Name</h2>
+                    </div>
+                    <div class="card-footer" style="padding: 10px">
+                        <p class="card-text" style="font-size: 12px">এখানে কিছু বর্ণনা থাকবে এখানে কিছু বর্ণনা থাকবে< এখানে কিছু বর্ণনা থাকবে<</p>
+                        <center>
+                            @if (category.Categories.Any())
+                            {
+                                <a href='@Url.Action("SubCategory", "MainCategory", new {subcategory = category.Id})'>আরো জানুন</a>
+                            }
+                        </center>
+                    </div>
+                </div>
+
+            </div>
+        }
+    }
+</div>
+

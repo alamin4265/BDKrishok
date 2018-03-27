@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Small Business - Start Bootstrap Template</title>
+
+    <link href="~/CustomDesign/ClientSite/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/CustomDesign/ClientSite/small-business.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#run").click(function () {
+            jQuery.ajax({
+                url: $("#url").val(),
+                success: function (result) {
+                    html = jQuery('<span>').html(result);
+                    alert(html.find(".offer-price").html());
+                },
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    @Html.Partial("~/Views/Shared/Client/Client_Header.cshtml")
+
+    <input id="url" type="text" value="https://www.amazon.com/Minimalist-Classic-VOCARO-Carbon-Leather/dp/B079193NGK/ref=as_sl_pc_as_ss_li_til?tag=bd2018-20&linkCode=w00&linkId=a61b905371cbf8d75cd58cefb2a2c3c2&creativeASIN=B079193NGK"/>
+    <button id="run">Run</button>
+    <!-- Page Content -->
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    @Html.Partial("~/Views/Shared/Client/Client_Footer.cshtml")
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/CustomDesign/ClientSite/jquery.min.js"></script>
+    <script src="~/CustomDesign/ClientSite/bootstrap.bundle.min.js"></script>
+
+    @*<script type="text/javascript">
+        $(document).ready(function () {
+
+
+        });
+    </script>*@
+</body>
+</html>
